@@ -1,0 +1,233 @@
+@font-face {
+    font-family: HankenGrotesk;
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: HankenGrotesk;
+} 
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1rem 1rem 2rem hsla(224, 30%, 27%, 0.07);
+    border-radius: 1.5rem;
+}
+
+/* left-side of the card */
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, 
+    hsl(241, 81%, 54%), 
+    hsl(252, 100%, 67%));
+    text-align: center;
+    padding: 2rem 3rem 2rem 3rem;
+    border-radius: 1.2rem;
+}
+
+.upper-p {
+    color: hsla(0, 0%, 100%, 0.8);
+    font-size: 1.2rem;
+}
+
+.average-score {
+    padding: 2.2rem 3rem 2.2rem 3rem;
+    border-radius: 5.5rem;
+    width: fit-content;
+    margin: 2rem 0 1.5rem 0;
+    background: linear-gradient(to top, hsla(241, 72%, 46%, 0),
+    hsla(256, 72%, 46%, 1));
+}
+
+/* This is the style for the user's score inside the circle */
+.user-score {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+/* and this one is for the maximum score inside of the circle as well */
+.maximum-score {
+    color: hsla(0, 0%, 100%, 0.4);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: -0.5rem;
+}
+
+/* this one's for the "Great" paragraph */
+.middle-p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* and this one's for the lowest paragraph */
+.lower-p {
+    color: hsla(0, 0%, 100%, 0.7);
+    font-size: 1rem;
+    width: 14rem;
+    margin-top: 1rem;
+}
+
+/* Right side of the card */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    width: 22em;
+}
+
+.summary {
+    color: black;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.reaction-result,
+.memory-result,
+.visual-result,
+.verbal-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border-radius: 0.6rem;
+}
+
+.reaction-result {
+    background: hsla(0, 100%, 67%, 0.06);
+}
+
+.memory-result {
+    background: hsla(39, 100%, 56%, 0.06);
+}
+
+.verbal-result {
+    background: hsla(166, 100%, 37%, 0.06);
+}
+
+.visual-result {
+    background: hsla(234, 85%, 45%, 0.06);
+}
+
+.reaction-test,
+.memory-test,
+.visual-test,
+.verbal-test {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+}
+
+.reaction-test p {
+    color: red;
+}
+
+.memory-test p {
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal-test p {
+    color: hsl(166, 100%, 37%);
+}
+
+.visual-test p {
+    color: hsl(234, 85%, 45%);
+}
+
+span {
+    color: hsla(224, 30%, 27%, 0.6);
+}
+
+.result-score {
+    color: black;
+    font-weight: bold;
+}
+
+button {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 1rem;
+    background: hsl(224, 30%, 27%);
+    cursor: pointer;
+
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to top, 
+    hsl(241, 81%, 54%), 
+    hsl(252, 100%, 67%));
+}
+
+
+/* Mobile Design */
+@media (max-width: 736px) and (min-width: 376px) {
+    .main-container {
+        padding: 1rem;
+    }
+
+    .card {
+        flex-direction: column;
+        height: 80%;
+        width: fit-content;
+        border-radius: 1.5rem;
+    }
+
+    .left-side {
+        border-radius: 1.5rem;
+        padding-bottom: 2.2rem;
+    }
+
+    .lower-p {
+        width: 16rem;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+}
+
+@media (max-width: 376px) {
+    .card {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .left-side {
+        border-radius: 0 0 2rem 2rem;
+        padding-bottom: 2.2rem;
+    }
+
+    .lower-p {
+        width: 16rem;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+}
