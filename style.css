@@ -184,7 +184,7 @@ button:hover {
 
 
 /* Mobile Design */
-@media (max-width: 736px) and (min-width: 376px) {
+@media (max-width: 736px) and (min-width: 450px) {
     .main-container {
         padding: 1rem;
     }
@@ -210,7 +210,7 @@ button:hover {
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 450px) {
     .card {
         flex-direction: column;
         height: 100%;
